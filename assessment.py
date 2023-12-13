@@ -12,6 +12,9 @@ def nth_most_rate_signature(my_list=[], nums=''):
     # looping through the list
     for num in my_list:
         
+        # checking if number supplied is in the list
+        if nums not in my_list:
+            return f"Sorry {nums} is not in the list"
         # checking if the given argument nums is contained in the new list num
         if num == nums:
            new_list.append(num)
