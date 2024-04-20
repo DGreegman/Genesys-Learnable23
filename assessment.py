@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 """ 
     the nth_most_rate_signature is a function that returns the nth-rarest item given to the function
     it is supplied with two arguments, list of arrays/list of integers and n is for number of times the given integer appeared in the list.
@@ -31,4 +32,8 @@ def nth_most_rate_signature(my_list=[], nums=''):
         return f"the answer is {nums} as {nums} is the {len(new_list)}th rarest item"
 
 # invoking the nth_most_rate_signature 
-print(nth_most_rate_signature([5,4,5,4, 5, 4, 4, 5, 3, 3, 3, 2, 2, 1, 5], 5))
+while True:
+    user_input = input('input your search number ')
+    if user_input == 'stop':
+        break
+    print(nth_most_rate_signature([5,4,5,4, 5, 4, 4, 5, 3, 3, 3, 2, 2, 1, 5], int(user_input)))
